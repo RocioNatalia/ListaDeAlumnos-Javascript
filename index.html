@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Workshop</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="workshop1.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <header class="row">
+      <div class="col">
+        <h1>Listado de Alumnos</h1>
+      </div>
+    </header>
+
+    <main class="row">
+      <section class="col">
+        <h2>Lista de Alumnos</h2>
+        <br />
+        <!--Aca se van a mostrar los datos-->
+        <ul class="list-group text-left" id="listaAlumnos"></ul>
+      </section>
+
+      <section class="col">
+        <h2>Ingreso de datos</h2>
+        <br />
+        <!--Aca se van a ingresar los datos -->
+
+        <form>
+          <div class="row">
+            <div class="col">
+              <input
+                id="name"
+                class="dato"
+                placeholder="Nombre"
+                type="text"
+                onblur="validarNombreOApellido(this)"
+                
+              />
+            </div>
+            <div class="col">
+              <input
+                id="lastName"
+                class="dato"
+                placeholder="Apellido"
+                type="text"
+                onblur="validarNombreOApellido(this)"
+               
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input
+                id="dni"
+                class="dato"
+                placeholder="DNI"
+                type="number"
+                onblur="validarDni(this)"
+                
+              />
+              <p id="errorDni"></p>
+            </div>
+
+            <div class="col">
+              <input
+                id="mail"
+                class="dato"
+                placeholder="E-mail"
+                type="email"
+                onblur="validarEmail(this)"
+                
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <button
+                id="botonDeIngreso"
+                class="boton gris entero "
+                type="button"
+                onclick="datosValidados(this)"
+                disabled
+              >
+                Agregar alumno
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input
+                id="dniEliminar"
+                name="dni"
+                placeholder="DNI"
+                type="number"
+              />
+            </div>
+            <div class="col">
+              <button
+                class="boton rojo mitad"
+                type="button"
+                onclick="eliminarAlumno(this)"
+              >
+                Eliminar alumno
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <input id="buscado" placeholder="Nombre" type="search" />
+            </div>
+            <div class="col">
+              <button
+                class="boton verde mitad"
+                type="button"
+                onclick="buscarAlumno(this)"
+              >
+                Buscar alumno
+              </button>
+              
+            </div>
+          </div>
+        </form>
+        <div></div>
+          <ul id = 'encontrados'>
+          </ul>
+        </div>
+      </section>
+      
+    </main>
+    <script src="workshop1.js"></script>
+  </body>
+</html>
