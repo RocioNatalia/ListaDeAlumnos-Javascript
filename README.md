@@ -1,6 +1,6 @@
 
 # Programa de altas y bajas de alumnos :raising_hand:
-_Permite generar altas y bajas de alumnos que se muestan en pantalla a traves de la manipulacion del DOM y se almacenan en el LocalStoragee_
+_Permite generar altas y bajas de alumnos que se muestan en pantalla._
 
 * [Preview](https://rocionatalia.github.io/ListaDeAlumnos-Javascript/)
 
